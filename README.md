@@ -19,12 +19,8 @@
 ## Running point_cloud_interface.ipynb on Google Colab
 Works with CUDA 11.8 or higher and with A800 GPUs or higher.
 
-1. `git clone https://github.com/OmdenaAI/IECO.git`
-2. `cd IECO`
-3. Switch to branch `git switch maz_mashAnything`
-4. Upload contents of branch to `MyDrive` of GDrive
-5. Also upload `Data` Folder (Sample Data folder) to `MyDrive` of GDrive
-6. Make sure paths are set properly in `jupyter notebook
+- Upload `point_cloud_inference.ipynb` to Google Drive
+- Make sure paths are set properly in `jupyter notebook`
 
 
 ### Point Cloud Command line inference
