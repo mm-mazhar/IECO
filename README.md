@@ -1,6 +1,11 @@
 # 3D Roof Reconstruction with Computer Vision for Solar Energy Optimization
 
-## Modeling Approaches
+## Proposed Solution
+**Image Masking**: Use the roof polygons as masks on the aerial image. This will highlight only the roof areas, allowing the model to learn features solely within these regions.  
+**Point Cloud Extraction**: Once the roof areas are segmented in the 2D image, you can map these masked regions to your 3D point cloud data. Assuming you have spatial alignment (e.g., GPS coordinates) between the aerial image and the point cloud, extract the points within the 2D boundaries of each roof polygon.  
+**3D Reconstruction**: After extracting the point cloud data within each masked area, you’ll have the spatial points associated with each roof. These can be processed for reconstruction, even accounting for height, since the 3D coordinates are preserved in the point cloud.  
+
+## Modeling Experiments
 
 ### Aerial Image Segmentation
 
