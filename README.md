@@ -10,7 +10,7 @@
 ### Aerial Image Segmentation
 
 Model: SAMv2  
-Objective: Identify roof planes from aerial images
+Objective: Identify roof planes from aerial images  
 
 **Technical Walkthrough**
 - Extract 2D information from planes.json
@@ -22,7 +22,7 @@ Objective: Identify roof planes from aerial images
 ### Mesh Construction
 
 Model: Mesh Anything v2  
-Objective: Reconstruct 3D building from its point cloud
+Objective: Reconstruct 3D building from its point cloud  
 
 **Technical Walkthrough**
 - Compute point cloud normals
@@ -30,17 +30,18 @@ Objective: Reconstruct 3D building from its point cloud
 
 ### Point Cloud Segmentation
 
-Model: PointNet
-Objective: Identify roof planes from point clouds
+Model: PointNet  
+Objective: Identify roof planes from point clouds  
 
 **Technical Walkthrough**
-- Highlight point clouds associated with roof planes
-- Use these labels (roof/non-roof) to train pointnet
+- Annotate point clouds overlapping with roof planes
+- Augment points with random rotation and noise
+- Train PointNet using T-module and cross entropy loss
 
 ### Plane Attribute Estimation
 
-Model: EfficientNet/ResNet50
-Objective: Estimate plane parameters (tilt, azimuth, height) from point clouds and aerial images
+Model: EfficientNet/ResNet50  
+Objective: Estimate plane parameters (tilt, azimuth, height) from point clouds and aerial images  
 
 **Technical Walkthrough**
 - Perform data augmentation and standard preprocessing
